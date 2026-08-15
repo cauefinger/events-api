@@ -19,5 +19,5 @@ async def find_by_id(event_id: int, event_service: EventService = Depends(get_ev
     return event_service.find_by_id(event_id)
 
 @event_router.post("/")
-async def create_event(event: CreateEvent, event_service: EventService = Depends(get_event_service)):
+async def create(event: CreateEvent, event_service: EventService = Depends(get_event_service)):
     return event_service.create(event)
