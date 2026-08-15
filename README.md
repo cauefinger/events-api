@@ -33,7 +33,7 @@ Você vai construir uma API onde usuários podem criar eventos, comprar/reservar
   - `rating`
   - `comment`
 
-### Regras
+### Regras do vini
 - Um evento possui uma capacidade máxima.
 - Não pode vender mais ingressos que a capacidade.
 - Um usuário não pode comprar dois ingressos do mesmo tipo para o mesmo evento.
