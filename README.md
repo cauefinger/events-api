@@ -44,3 +44,7 @@ Você vai construir uma API onde usuários podem criar eventos, comprar/reservar
 - Cancelar um ingresso libera uma vaga.
 - GET /events deve retornar apenas eventos abertos por padrão.
 - Eventos podem ter categorias: CONCERT, SPORT, CONFERENCE, etc.
+
+### Running local
+
+`uv run uvicorn events_api.main:app --reload`
