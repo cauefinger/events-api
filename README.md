@@ -4,10 +4,11 @@ Você vai construir uma API onde usuários podem criar eventos, comprar/reservar
 
 ## Tarefas
 [ ] Criar depends.py e fazer o gerenciamento de sessao com o DB postgreSQL (Caue)
+[ ] Trocar os tipos para UUID
 
 ### Entidades principais
 
-- **User**
+- **User** OK
   - `id`
   - `name`
   - `email`
