@@ -2,6 +2,9 @@
 
 Você vai construir uma API onde usuários podem criar eventos, comprar/reservar ingressos e deixar avaliações.
 
+## Tarefas
+[ ] Criar depends.py e fazer o gerenciamento de sessao com o DB postgreSQL (Caue)
+
 ### Entidades principais
 
 - **User**
