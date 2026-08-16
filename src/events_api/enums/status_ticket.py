@@ -4,4 +4,4 @@ class Status_Ticket(Enum):
     PENDING = "PENDING"
     ACTIVE = "ACTIVE"
     CANCELED = "CANCELED"
-
+    ENDED = "ENDED"
