@@ -1,6 +1,6 @@
 
 from ..database import Base
-from sqlalchemy import Column, Integer, String, SQLAlchemyEnum, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, Enum
 from ..enums.status_event import StatusEvent
 
 class Event(Base):
@@ -13,7 +13,7 @@ class Event(Base):
     date_time = Column(DateTime, nullable=False)
     capacity = Column(Integer, nullable=False)
     status = Column(
-        SQLAlchemyEnum(StatusEvent),
+        Enum(StatusEvent),
           default=StatusEvent.PENDING
           )
 
