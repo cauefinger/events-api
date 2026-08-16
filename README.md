@@ -13,7 +13,7 @@ Você vai construir uma API onde usuários podem criar eventos, comprar/reservar
   - `name`
   - `email`
 
-- **Event**
+- **Event** OK
   - `id`
   - `title`
   - `description`
@@ -22,7 +22,7 @@ Você vai construir uma API onde usuários podem criar eventos, comprar/reservar
   - `capacity`
   - `status`
 
-- **Ticket**
+- **Ticket** OK 
   - `id`
   - `eventId`
   - `userId`
@@ -30,7 +30,7 @@ Você vai construir uma API onde usuários podem criar eventos, comprar/reservar
   - `price`
   - `status`
 
-- **Review**
+- **Review** OK
   - `id`
   - `eventId`
   - `userId`

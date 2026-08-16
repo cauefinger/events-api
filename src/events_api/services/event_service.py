@@ -2,6 +2,7 @@
 from sqlalchemy.orm import Session
 from ..models.event import Event
 from ..schemas.event import CreateEvent
+from enum import Enum
 
 from ..repositories.event_repository import EventRepository
 
@@ -20,7 +21,7 @@ class EventService:
             date_time=create_event.date_time,
             location=create_event.location,
             capacity=create_event.capacity,
-            status="CREATED" #TODO: criar um enum para status do evento
+            status="PENDENT" #TODO: criar um enum para status do evento
         )
 
         return self.repository.create(event)
