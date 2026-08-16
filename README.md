@@ -4,7 +4,11 @@ Você vai construir uma API onde usuários podem criar eventos, comprar/reservar
 
 ## Tarefas
 [ ] Criar depends.py e fazer o gerenciamento de sessao com o DB postgreSQL (Caue)
-[ ] Trocar os tipos para UUID
+[ ] Trocar os tipos dos models para UUID
+[ ] Criar um endpoint para venda de tickets (Não pode vender mais tickets que a capacidade do evento)
+[ ] Não pode vender ingresso para um evento fechado
+[ ] Criar um job que todo dia procure os eventos que acabaram e setar status para ENDED
+[ ] Criar endpoint para avaliar evento (só pode avaliar um evento se aquele usuário tiver ticket para aquele evento)
 
 ### Entidades principais
 
@@ -38,7 +42,6 @@ Você vai construir uma API onde usuários podem criar eventos, comprar/reservar
   - `comment`
 
 ### Regras
-- Um evento possui uma capacidade máxima.
 - Não pode vender mais ingressos que a capacidade.
 - Um usuário não pode comprar dois ingressos do mesmo tipo para o mesmo evento.
 - Não pode comprar ingresso para evento encerrado.
