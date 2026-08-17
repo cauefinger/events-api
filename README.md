@@ -5,8 +5,8 @@ Você vai construir uma API onde usuários podem criar eventos, comprar/reservar
 ## Tarefas
 [OK] Criar depends.py e fazer o gerenciamento de sessao com o DB postgreSQL (Caue)
 [OK] Trocar os tipos dos models para UUID
-[ ] Usar ForeignKey no ticket, review e event 
-[ ] Criar um endpoint para venda de tickets (Não pode vender mais tickets que a capacidade do evento)
+[OK] Usar ForeignKey no ticket, review e event 
+[ ] Criar um endpoint para venda de tickets (Visualizar tickets disponíveis, comprar ticket, não pode vender mais tickets que a capacidade do evento)
 [ ] Não pode vender ingresso para um evento fechado
 [ ] Criar um job que todo dia procure os eventos que acabaram e setar status para ENDED
 [ ] Criar endpoint para avaliar evento (só pode avaliar um evento se aquele usuário tiver ticket para aquele evento)

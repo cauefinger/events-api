@@ -1,7 +1,7 @@
 
 from events_api.database import SessionLocal
 
-def pegar_sessao():
+def get_session():
     db = SessionLocal()
     try:
         yield db 

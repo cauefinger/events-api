@@ -13,8 +13,5 @@ class Event(Base):
     location = Column(String, nullable=False)
     date_time = Column(DateTime, nullable=False)
     capacity = Column(Integer, nullable=False)
-    status = Column(
-        Enum(StatusEvent),
-          default=StatusEvent.PENDING
-          )
+    status = Column(Enum(StatusEvent),default=StatusEvent.PENDING)
 

@@ -1,9 +1,8 @@
 import uuid
 from ..database import Base
-from sqlalchemy import Column, Integer, String, Float, Enum, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, Enum, ForeignKey, Boolean
 from ..enums.status_ticket import Status_Ticket
 from sqlalchemy.dialects.postgresql import UUID
-
 
 
 class Ticket(Base):
@@ -15,4 +14,5 @@ class Ticket(Base):
     type = Column(String, index=True)
     price = Column(Integer, index=True)
     status = Column(Enum(Status_Ticket), default=Status_Ticket.PENDING)
-
+    buyer_id = Column(UUID(as_uuid=True), ForeignKey("user.id"), nullable=True) # nulo -- disponivel
+    
