@@ -9,5 +9,6 @@ app = FastAPI()
 app.include_router(event_router)
 
 """
+uvicorn events_api.main:app --reload --app-dir src
 http://127.0.0.1:8000
 """

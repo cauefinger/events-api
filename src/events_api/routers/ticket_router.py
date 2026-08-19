@@ -23,3 +23,5 @@ async def buy_tickets(ticket_id: int, session: Session = Depends(get_session)):
             status_code=400,
             detail = ("Ticket unavailable.")
         )
+    else:
+        # AQUI FAZER A VERIFICAÇÃO DO TOKEN
