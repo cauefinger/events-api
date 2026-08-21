@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from events_api.dependencies.get_session import get_session
 from events_api.models.ticket import Ticket
+from events_api.services.ticket_service import ticket, buy_tickets
 
 ticket_router = APIRouter(prefix="/tickets")
 
@@ -12,16 +13,8 @@ async def view_tickets(session: Session = Depends(get_session)):
 
 
 @ticket_router.post("/buy/{ticket_id}")
-async def buy_tickets(ticket_id: int, session: Session = Depends(get_session)):
-
-    ticket = session.query(Ticket).filter(
-        Ticket.id == ticket_id
-    ).first()
-
-    if ticket.buyer_id is not None:
-        raise HTTPException(
-            status_code=400,
-            detail = ("Ticket unavailable.")
-        )
-    else:
-        # AQUI FAZER A VERIFICAÇÃO DO TOKEN
+async def buy_ticket(
+    ticket_id: int,
+    session: Session = Depends(get_session)
+):
+    return await buy_tickets
